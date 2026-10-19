@@ -1,0 +1,14 @@
+.avatar {
+  flex: none;
+  border-radius: 50%;
+  object-fit: cover;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-border);
+}
+.fallback {
+  background: var(--color-surface-raised);
+  color: var(--color-text-muted);
+  font-weight: 600;
+}

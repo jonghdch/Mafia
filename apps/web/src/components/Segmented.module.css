@@ -1,0 +1,80 @@
+.set {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+.legend {
+  padding: 0;
+  margin-bottom: var(--space-2);
+  font-size: var(--text-small);
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+.group {
+  display: inline-flex;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-input);
+  background: var(--color-bg);
+  padding: 2px;
+  gap: 2px;
+}
+.item {
+  position: relative;
+  display: flex;
+}
+.input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  margin: 0;
+  cursor: pointer;
+}
+.face {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 56px;
+  min-height: calc(var(--target-size) - 6px);
+  padding: 0 var(--space-3);
+  border-radius: 4px;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  transition: background-color var(--duration-hover) ease-out, color var(--duration-hover) ease-out;
+}
+.item:hover .face {
+  color: var(--color-text);
+}
+.input:checked + .face {
+  background: var(--color-surface-raised);
+  color: var(--color-text);
+  font-weight: 700;
+  box-shadow: 0 1px 2px var(--p-black-60), inset 0 0 0 1px var(--color-border-strong);
+}
+.input:focus-visible + .face {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+.face {
+  gap: var(--space-2);
+}
+.locked .face,
+.locked:hover .face {
+  color: var(--color-text-faint);
+  font-weight: 400;
+}
+.locked .input {
+  pointer-events: none;
+}
+.locked {
+  cursor: not-allowed;
+}
+.soon {
+  font-size: var(--text-small);
+}
+.readonly {
+  min-height: calc(var(--target-size) - 6px);
+  display: flex;
+  align-items: center;
+  color: var(--color-text);
+}
