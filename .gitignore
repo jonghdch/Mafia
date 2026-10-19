@@ -1,0 +1,18 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+*.sqlite
+*.db
+_workspace/
+.DS_Store
+
+# planning docs stay local (user decision 2026-10-19)
+docs/
+
+# internal agent/planning files stay local (user decision 2026-10-19)
+AGENTS.md
+CLAUDE.md
+PHASES.md
+ARCHITECTURE.md
